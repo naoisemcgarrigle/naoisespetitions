@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         jdk 'jdk17'
-        mvn 'maven-3.8.7'
+        maven 'maven-3.8.7'
     }
     stages {
         stage('GetProject') {
