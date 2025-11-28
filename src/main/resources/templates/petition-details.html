@@ -11,6 +11,14 @@
         <li th:each="signature : ${petition.signatures}" th:text="${signature}"></li>
     </ul>
     <br>
+    <h3>Sign this petition:</h3>
+    <form th:action="@{/petitions/{id}(id=${petition.id})/sign}" method="post">
+        <label for="signature">Title:</label>
+        <br>
+        <input type="text" id="signature" name="signature">
+        <input type="submit" value="Sign" required>
+    </form>
+    <br>
     <a th:href="@{/petitions}">Go back</a>
 </body>
 </html>

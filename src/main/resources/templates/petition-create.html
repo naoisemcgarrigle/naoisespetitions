@@ -9,11 +9,11 @@
     <form th:action="@{/petitions/create}" th:object="${petition}" method="post">
         <label for="title">Title:</label>
         <br>
-        <input type="text" id="title" th:field="*{title}">
+        <input type="text" id="title" th:field="*{title}" placeholder="Enter petition title..." required>
         <br>
         <label for="content">Content:</label>
         <br>
-        <textarea id="content" th:field="*{content}" rows="5"></textarea>
+        <textarea id="content" th:field="*{content}" rows="5" placeholder="Enter petition description..." required></textarea>
         <br>
         <button type="submit">Submit Petition</button>
     </form>
