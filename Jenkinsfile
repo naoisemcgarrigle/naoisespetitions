@@ -27,7 +27,7 @@ pipeline {
         stage('Archive') {
             steps {
                 archiveArtifacts allowEmptyArchive: true,
-                    artifacts: '**/naoisepetitions*.war'
+                    artifacts: '**/naoisespetitions*.war'
             }
         }
         stage('Deploy') {
