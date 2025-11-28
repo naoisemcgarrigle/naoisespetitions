@@ -5,6 +5,19 @@
     <title>Naoise's Petitions</title>
 </head>
 <body>
-<p>petition-create</p>
+    <h1>Create New Petition:</h1>
+    <form th:action="@{/create}" th:object="${petition}" method="post">
+        <label for="title">Title:</label>
+        <br>
+        <input type="text" id="title" th:field="*{title}">
+        <br>
+        <label for="content">Content:</label>
+        <br>
+        <textarea id="content" th:field="*{content}" rows="5"></textarea>
+        <br>
+        <button type="submit">Submit Petition</button>
+    </form>
+    <br>
+    <a th:href="@{/petitions}">Go back</a>
 </body>
 </html>

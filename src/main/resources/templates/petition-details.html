@@ -5,6 +5,12 @@
     <title>Naoise's Petitions</title>
 </head>
 <body>
-<p>petition-details</p>
+    <h1 th:text="${petition.title}">Petition Title</h1>
+    <p th:text="${petition.content}">Content</p>
+    <ul th:if="${!#lists.isEmpty(petition.signatures)}">
+        <li th:each="signature : ${petition.signatures}" th:text="${signature}"></li>
+    </ul>
+    <br>
+    <a th:href="@{/petitions}">Go back</a>
 </body>
 </html>
