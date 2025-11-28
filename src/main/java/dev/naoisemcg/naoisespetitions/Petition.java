@@ -26,6 +26,14 @@ public class Petition {
         this.signatures = signatures;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public String getTitle() {
         return title;
     }
