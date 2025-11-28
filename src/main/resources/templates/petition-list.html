@@ -5,7 +5,6 @@
     <title>Naoise's Petitions</title>
 </head>
 <body>
-    <p th:text="${petitions}"></p>
     <h1>Petition List:</h1>
     <a th:href="@{/petitions/create}">Create new petition</a>
     <br>
@@ -16,16 +15,11 @@
         </tr>
         <tr th:each="petition : ${petitions}">
             <td>
-                <a th:href="|/petitions/${petition.id}|" th:text="${petition.title}">Petition Title</a>
+                <a th:href="@{/petitions/{id}(id=${petition.id})}" th:text="${petition.title}">Petition Title</a>
             </td>
             <td th:text="${#lists.size(petition.signatures)}">0</td>
         </tr>
     </table>
 
-<!--    <ul th:each="petition : ${petitions}">-->
-<!--        <li th:text="${petition.title}"></li>-->
-<!--        <li th:text="${petition.content}"></li>-->
-<!--        <li th:text="${petition.signatures}"></li>-->
-<!--    </ul>-->
 </body>
 </html>

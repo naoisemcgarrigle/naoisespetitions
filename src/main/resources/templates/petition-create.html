@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>Create New Petition:</h1>
-    <form th:action="@{/create}" th:object="${petition}" method="post">
+    <form th:action="@{/petitions/create}" th:object="${petition}" method="post">
         <label for="title">Title:</label>
         <br>
         <input type="text" id="title" th:field="*{title}">
