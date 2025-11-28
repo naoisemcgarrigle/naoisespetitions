@@ -10,13 +10,12 @@
     <ul th:if="${!#lists.isEmpty(petition.signatures)}">
         <li th:each="signature : ${petition.signatures}" th:text="${signature}"></li>
     </ul>
-    <br>
     <h3>Sign this petition:</h3>
-    <form th:action="@{/petitions/{id}(id=${petition.id})/sign}" method="post">
-        <label for="signature">Title:</label>
+    <form th:action="@{/petitions/{id}/sign(id=${petition.id})}" method="post">
+        <label for="signature">Name:</label>
         <br>
-        <input type="text" id="signature" name="signature">
-        <input type="submit" value="Sign" required>
+        <input type="text" id="signature" name="signature" placeholder="Enter name..." required>
+        <input type="submit" value="Sign">
     </form>
     <br>
     <a th:href="@{/petitions}">Go back</a>
