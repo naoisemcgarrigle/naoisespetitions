@@ -12,6 +12,7 @@ public class Petition {
     private Integer id;
 
     private String title;
+    @Lob
     private String content;
 
     @ElementCollection
