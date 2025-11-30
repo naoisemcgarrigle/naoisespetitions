@@ -31,6 +31,6 @@ public class PetitionService {
     }
 
     public List<Petition> searchPetitions(String term) {
-        return petitionRepository.findByTitleContaining(term);
+        return petitionRepository.findByTitleContainingIgnoreCase(term);
     }
 }
