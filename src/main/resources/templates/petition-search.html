@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <title>Petition Search</title>
+</head>
+<body>
+<h1>Petitions:</h1>
+<h3> Search results for "<span th:text="${term}">term</span>"</h3>
+
+<!--If results is not null-->
+<th:block th:if="${results != null and !#lists.isEmpty(results)}">
+    <table>
+        <tr>
+            <th>Petition Title</th>
+            <th>Signatures</th>
+        </tr>
+        <tr th:each="result : ${results}">
+            <td>
+                <a th:href="@{/petitions/{id}(id=${petition.id})}" th:text="${result.title}">Petition Title</a>
+            </td>
+            <td th:text="${#lists.size(result.signatures)}">0</td>
+        </tr>
+    </table>
+</th:block>
+
+<!--If results is null-->
+<p th:if="${results == null or #lists.isEmpty(results)}">
+    No results found.
+</p>
+<br>
+<a th:href="@{/petitions}">Go back</a>
+
+</body>
+</html>

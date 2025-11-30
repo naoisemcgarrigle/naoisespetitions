@@ -5,9 +5,15 @@
     <title>Naoise's Petitions</title>
 </head>
 <body>
-    <h1>Petition List:</h1>
+    <h1>Naoise's Petitions</h1>
     <a th:href="@{/petitions/create}">Create new petition</a>
     <br>
+    <h3>Search Petitions:</h3>
+    <form th:action="@{/petitions/search}" method="get">
+        <input type="text" id="search" name="search" placeholder="Search petitions..." required>
+        <input type="submit" value="Search">
+    </form>
+    <h3>All Petitions:</h3>
     <table>
         <tr>
             <th>Petition Title</th>

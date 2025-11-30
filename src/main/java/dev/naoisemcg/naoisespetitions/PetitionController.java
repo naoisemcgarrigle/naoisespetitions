@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/petitions")
 public class PetitionController {
@@ -23,6 +25,14 @@ public class PetitionController {
     public String getPetitionDetails(@PathVariable Integer id, Model model) {
         model.addAttribute("petition", petitionService.getPetitionById(id));
         return "petition-details";
+    }
+
+    @GetMapping("/search")
+    public String getSearchResults(@RequestParam(required = false) String search, Model model) {
+        List<Petition> results = petitionService.searchPetitions(search);
+        model.addAttribute("results", results);
+        model.addAttribute("term", search);
+        return "petition-search";
     }
 
     @GetMapping("/create")
