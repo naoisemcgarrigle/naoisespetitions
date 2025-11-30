@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
     <title>Petition Search</title>
 </head>
 <body>
@@ -25,11 +26,11 @@
 </th:block>
 
 <!--If results is null-->
-<p th:if="${results == null or #lists.isEmpty(results)}">
+<p class="no-results" th:if="${results == null or #lists.isEmpty(results)}">
     No results found.
 </p>
 <br>
-<a th:href="@{/petitions}">Go back</a>
+<a th:href="@{/petitions}" class="back-link">Go back</a>
 
 </body>
 </html>
