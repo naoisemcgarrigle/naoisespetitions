@@ -17,7 +17,7 @@
         </tr>
         <tr th:each="result : ${results}">
             <td>
-                <a th:href="@{/petitions/{id}(id=${petition.id})}" th:text="${result.title}">Petition Title</a>
+                <a th:href="@{/petitions/{id}(id=${result.id})}" th:text="${result.title}">Petition Title</a>
             </td>
             <td th:text="${#lists.size(result.signatures)}">0</td>
         </tr>
