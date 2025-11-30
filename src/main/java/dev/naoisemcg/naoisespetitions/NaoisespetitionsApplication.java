@@ -10,5 +10,4 @@ public class NaoisespetitionsApplication {
 		SpringApplication.run(NaoisespetitionsApplication.class, args);
 	}
 
-    // webhook test
 }
