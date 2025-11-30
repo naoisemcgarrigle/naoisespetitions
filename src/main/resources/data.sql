@@ -1,4 +1,4 @@
-INSERT INTO petition (title, content) VALUES ('Help the Park', 'This petition calls for upgrades to the local public park, including improved lighting, additional seating, and new children\'s play equipment to ensure a safer and more enjoyable environment.');
+INSERT INTO petition (title, content) VALUES ('Help the Park', 'This petition calls for upgrades to the local public park, including improved lighting, additional seating, and new children''s play equipment to ensure a safer and more enjoyable environment.');
 INSERT INTO petition (title, content) VALUES ('Improve Public Transport Reliability', 'Commuters request more frequent bus services, updated timetables, and improved maintenance of transport vehicles to reduce delays and cancellations.');
 INSERT INTO petition (title, content) VALUES ('Save Our Oceans', 'Our oceans and seas are being heavily polluted by microplastics. Help our campaign to raise awareness.');
 INSERT INTO petition (title, content) VALUES ('Increase Funding for Mental Health Services', 'The community is calling for increased funding to support mental health services, including access to therapy, crisis support, and awareness programs.');
